@@ -1,4 +1,4 @@
-# awsbootstrap
+# AWS quick bootstrap
 Terraform templates to bootstrap AWS VPC and EC2 resources
 
 # Use
