@@ -13,7 +13,7 @@ resource "aws_instance" "wordpress-instance" {
    vpc_security_group_ids = ["${aws_security_group.frontendsg.id}"]
    associate_public_ip_address = true
    source_dest_check = false
-   user_data = "${file("frontinstall.sh")}"
+   user_data = "${file("scripts/frontinstall.sh")}"
 
   tags {
     Name = "wp-webserver"
@@ -31,7 +31,7 @@ resource "aws_instance" "database-instance" {
    vpc_security_group_ids = ["${aws_security_group.backendsg.id}"]
    associate_public_ip_address = false
    source_dest_check = false
-   user_data = "${file("backendinstall.sh")}"
+   user_data = "${file("scripts/backendinstall.sh")}"
 
   tags {
     Name = "wp-dbserver"
