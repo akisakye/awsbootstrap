@@ -10,11 +10,18 @@ Edit `variables.tf` to modify and change variables to reflect your environment.
 Also edit variable `key_path` to reflect the location of your ssh public key that will be injected inside the instances.
 The files `backendinstall.sh` and `frontinstall.sh` includes bootstrap config that the instances will run on first boot.
 
+You will also need to export your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
+
+```
+export AWS_ACCESS_KEY_ID="XXXXXXXXXXXXXXXXXXXX"
+export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
+
 Finally,
 
 ```
 terraform plan
-````
+```
 and 
 
 ```
